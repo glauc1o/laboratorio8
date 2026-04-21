@@ -1,6 +1,6 @@
 # Laboratório 08 — Alinhamento Humano com DPO
 
-> **Partes geradas/complementadas com IA, revisadas por [Seu Nome]**
+> **Partes geradas/complementadas com IA, revisadas por Gláucio Monteiro**
 
 Pipeline de alinhamento de LLM utilizando **Direct Preference Optimization (DPO)** para garantir comportamento **Útil, Honesto e Inofensivo (HHH)**.
 
@@ -116,33 +116,7 @@ Após o treino, o script executa automaticamente uma validação que:
 ```
 Log-prob chosen   (segura) : -1.2341
 Log-prob rejected (nociva) : -4.8872
-✅ ALINHAMENTO CONFIRMADO: modelo favorece a resposta segura.
+ALINHAMENTO CONFIRMADO: modelo favorece a resposta segura.
 ```
 
----
 
-## Critérios de Avaliação Atendidos
-
-- [x] Dataset com 33 exemplos (mínimo: 30) com colunas `prompt`, `chosen`, `rejected`
-- [x] `DPOTrainer` configurado sem erros de sintaxe
-- [x] Dois modelos na memória: Ator (treinável) e Referência (congelado para KL)
-- [x] `beta = 0.1` configurado com justificativa matemática completa no README
-- [x] `paged_adamw_32bit` e outras estratégias de economia de memória aplicadas
-- [x] Validação de supressão de resposta `rejected` via log-probabilidade
-- [x] Entrega via Git com tag `v1.0`
-
----
-
-## Versionamento
-
-```bash
-git init
-git add .
-git commit -m "feat: Lab 08 - DPO alignment pipeline completo"
-git tag v1.0
-git push origin main --tags
-```
-
----
-
-*Partes geradas/complementadas com IA, revisadas por [Seu Nome]*
